@@ -8,4 +8,3 @@ dash-html-components
 plotly
 pandas
 numpy 
-plotly.graph_objs
