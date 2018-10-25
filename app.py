@@ -18,6 +18,7 @@ df.rename(columns={'na_item':'Indicator Name','geo\\time':'Country Name'}, inpla
 df['Year'] = df['Year'].astype('int')
 
 app = dash.Dash()
+server = app.server
 
 #POSSIBLE VALUES FOR THE INDICATORS AND COUNTRIES
 available_indicators = df['Indicator Name'].unique()
@@ -168,4 +169,4 @@ def update_graph2(country, yaxis_column_name):
 
 
 if __name__ == '__main__':
-    app.run_server()
+    app.run_server(debug=True)
